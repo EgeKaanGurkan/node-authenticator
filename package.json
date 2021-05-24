@@ -1,6 +1,6 @@
 {
-  "name": "node-authenticator",
-  "version": "1.0.0",
+  "name": "@egekaangurkan/node-authenticator",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {

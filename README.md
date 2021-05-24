@@ -25,12 +25,18 @@ There is also a `Dockerfile` and a `docker-compose.yaml` file for the Dockerizat
     
 ## Setup
 
-**Clone the repo:** 
-  * `git clone https://github.com/EgeKaanGurkan/node-authenticator.git`
+### Installation
 
-**Install dependencies:**
-  * `cd node-authenticator`
-  * `npm init`
+You can either download the package directly from `npm` or clone the repo to your machine to use it. \
+
+**1- Download from npm:**
+  * `npm i @egekaangurkan/node-authenticator`
+
+**2- Clone the repo:** 
+  * `git clone https://github.com/EgeKaanGurkan/node-authenticator.git`
+  * **Install dependencies:**
+    * `cd node-authenticator`
+    * `npm i`
 
 To start the setup, after cloning the package take a look at the `.env-example` file that is in the installation.
 This file contains numerous variables for you to be able to manage and customize the installation to your needs. Create a copy
