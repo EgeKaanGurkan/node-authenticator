@@ -48,19 +48,43 @@ redisClient.on('connect',function () {
 
 database.initDatabase();
 
+/**
+ * Creates an authentication server based on the host and port given.
+ *
+ * @param {string} host     - The hostname or IP of the server.
+ * @param {integer} port    - The port that the server will listen to.
+ */
+
 function createServer(host, port) {
     app.listen(port, (host) => {
         console.log(`Authentication server is running on ${config.server.SERVER_HOST}:${port}`)
     })
 }
 
+/**
+ * Sets the encoding scheme for the server.
+ *
+ * @param {('ascii' | 'base64')} encodingScheme - The encoding scheme that will be set.
+ */
+
 function setEncodingScheme(encodingScheme = encoding.ascii) {
     global.encodingScheme = encodingScheme
 }
 
+/**
+ * Returns the encoding scheme used by the server
+ * @return {string}
+ */
+
 function getEncodingScheme() {
     return global.encodingScheme
 }
+
+
+/**
+ * Provides an error printer
+ * @param e {Error} - The error thrown
+ */
 
 function printError(e) {
     console.log("ERROR: " + e.name + " | " + e.message);

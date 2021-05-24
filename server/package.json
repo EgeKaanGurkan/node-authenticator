@@ -1,5 +1,5 @@
 {
-  "name": "server",
+  "name": "node-authenticator-server",
   "version": "1.0.0",
   "description": "The server side for the authenticator.",
   "main": "index.js",

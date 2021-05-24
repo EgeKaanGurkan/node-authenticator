@@ -1,8 +1,19 @@
 const { generateHOTP } = require('./hotp');
 
 /*
+ *
+ */
+
+/**
  * This is an implementation of Time-Based One Time Password (TOTP) algorithm
  * specified in RFC 6238 (https://tools.ietf.org/html/rfc6238)
+ *
+ * @param secret
+ * @param window
+ * @param timeStepInSeconds
+ * @param initialTime
+ * @param otpLength
+ * @return {generateHOTP}
  */
 function generateTOTP(secret, window = 0, timeStepInSeconds = 30, initialTime = 0, otpLength = 6) {
     if (!secret) {
@@ -15,11 +26,14 @@ function generateTOTP(secret, window = 0, timeStepInSeconds = 30, initialTime = 
     return generateHOTP(secret, counter + window, otpLength);
 }
 
-/*
+/**
  * This function verifies the validity of OTP (token) entered by the user
  * from the Google Authenticator app.
- * The secret passed here as argument must match with the secret in the
- * authenticator app.
+ *
+ * @param token         - The token to be checked
+ * @param secret        - The secret of the user
+ * @param window        - The window to check within
+ * @return {boolean}
  */
 function verifyTOTP(token, secret, window = 1) {
     try {

@@ -1,7 +1,7 @@
 {
-  "name": "database",
+  "name": "node-authenticator-database",
   "version": "1.0.0",
-  "description": "",
+  "description": "The database management for the users and secrets.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

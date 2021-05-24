@@ -1,10 +1,9 @@
 {
-  "name": "bk-auth",
-  "version": "1.0.8",
+  "name": "node-authenticator",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "generateSecret": "node -e 'require(\"./generateSecret.js\").generateAndPrintSecret()'",
     "start": "node index"
   },
