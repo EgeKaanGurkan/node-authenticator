@@ -15,13 +15,13 @@ similar app that generates TOTP tokens based on [RFC 6238](https://datatracker.i
 There is also a `Dockerfile` and a `docker-compose.yaml` file for the Dockerization of the application.
 
 ## Dependencies
-  * `dotenv: 9.0.2`
-  * `express-handlebars: 5.3.2`
-  * `hi-base32: 0.5.1`
-  * `method-override: 3.0.0`
-  * `qrcode-terminal: 0.12.0`
-  * `mysql2: 2.2.5`
-  * `redis: 3.1.2`
+  * dotenv: `9.0.2`
+  * express-handlebars: `5.3.2`
+  * hi-base32: `0.5.1`
+  * method-override: `3.0.0`
+  * qrcode-terminal: `0.12.0`
+  * mysql2: `2.2.5`
+  * redis: `3.1.2`
     
 ## Setup
 
