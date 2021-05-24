@@ -1,0 +1,41 @@
+<div class="container " style="height: 100vh">
+    <div class="row h-100 justify-content-center align-items-center">
+        <div class="col-md-3"></div>
+        <div class="col-md-6"
+             style="">
+
+            <div class="" style="background: #ffffff; padding: 10px; border-radius: 7px; box-shadow: 0 20px 41px -18px rgba(0,0,0,0.75);">
+                <p class="h2 my-2" align="center" style="font-weight: bold; color: #ff3a64">{{{user.name}}} {{{user.surname}}}</p>
+                <form class="container mb-3" action="/change2FA?username={{{user.username}}}" method="post">
+                    {{#ifCond user.uses2FA "false"}}
+                        <button type="submit" class="btn btn-success mt-2">Activate 2FA</button>
+                    {{/ifCond}}
+                    {{#ifCond user.uses2FA "true"}}
+                        <button type="submit" class="btn btn-danger mt-2">Disable 2FA</button>
+                        <p class="mx-0 my-0">Secret: {{{user.secret}}}</p>
+                        <canvas id="qr-code"></canvas>
+                    {{/ifCond}}
+                    <br>
+                    <a href="/signin" class="btn btn-danger mt-2">Sign Out</a>
+                </form>
+            </div>
+
+
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+<script>
+    var qr;
+    (function() {
+        let urlParams = new URLSearchParams(window.location.search);
+        let qrURL = 'otpauth://totp/BK%20Mobil?secret=' + urlParams.get('secret');
+        qr = new QRious({
+            element: document.getElementById('qr-code'),
+            size: 200,
+            value: qrURL
+        });
+    })();
+</script>
