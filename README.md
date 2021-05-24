@@ -3,7 +3,6 @@
 
 ## Summary
 
----
 This package has the capability of setting up an authentication server that works with Google Authenticator or any other
 similar app that generates TOTP tokens based on [RFC 6238](https://datatracker.ietf.org/doc/html/rfc6238) and 
 [RFC 4226](https://datatracker.ietf.org/doc/html/rfc4226). Full capabilities;
@@ -14,8 +13,6 @@ similar app that generates TOTP tokens based on [RFC 6238](https://datatracker.i
   * Provide a very simple front-end as a POC
 
 There is also a `Dockerfile` and a `docker-compose.yaml` file for the Dockerization of the application.
-
----
 
 ## Dependencies
   * `dotenv: 9.0.2`
@@ -28,8 +25,14 @@ There is also a `Dockerfile` and a `docker-compose.yaml` file for the Dockerizat
     
 ## Setup
 
----
-To start the setup, after downloading the package, take a look at the `.env-example` file that is in the installation.
+**Clone the repo:** 
+  * `git clone https://github.com/EgeKaanGurkan/node-authenticator.git`
+
+**Install dependencies:**
+  * `cd node-authenticator`
+  * `npm init`
+
+To start the setup, after cloning the package take a look at the `.env-example` file that is in the installation.
 This file contains numerous variables for you to be able to manage and customize the installation to your needs. Create a copy
 of the file called `.env` and start editing variables there.\
 Variables;
